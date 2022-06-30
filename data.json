@@ -98,6 +98,15 @@
                 "srcode":"https://empash-google-clone.netlify.app/",
                 "slink":"https://empash-google-clone.netlify.app/"
             }
+        },
+        {
+            "snapshot":"images/sites/cocktaildb.png",
+            "title":"cocktailDB",
+            "techs":["react","react router"],
+            "links":{
+                "srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/cocktails",
+                "slink":"https://empash-cocktaildb.netlify.app/"
+            }
         }
     ]
 }
