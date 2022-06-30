@@ -26,7 +26,8 @@
             padding: 1rem;
             padding-top: .5rem;
             @include flex(column);
-            gap: 1rem;
+            justify-content: space-between;
+            gap: .7rem;
 
             & > h3 {
                 text-align: center;
