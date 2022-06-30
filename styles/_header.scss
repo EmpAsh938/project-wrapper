@@ -1,0 +1,95 @@
+.header {
+    @include flex(column);
+    gap: 2rem;
+
+
+    &__title {
+        padding: 3rem 0;
+        padding-bottom: 0;
+        text-align: center;
+        
+        & > h2 {
+            display: inline-block;
+            font-size: 2rem;
+            color: $stone-800;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 4px;
+                bottom: -5%;
+                left: 50%;
+                transform: translate(-50%);
+                background-color: $rose-500;
+            }
+        }
+
+    }
+
+    &__search {
+        @include flex(column);
+        align-items: center;
+        gap: 1rem;
+
+        &--box {
+            border: 1px solid $stone-300;
+            border-radius: 4px;
+            height: 50px;
+            background-color: $stone-50;
+            @include flex(row);
+            box-shadow: 2px 2px 5px 5px $stone-300;
+
+            & > input {
+                flex: 1;
+                padding: 0 1rem;
+                font-size: .95rem;
+
+                &::placeholder {
+                    text-transform: capitalize;
+                    color: $stone-500;
+                }
+            }
+
+            & > button {
+                width: 50px;
+                border-left: 1px solid $stone-300;
+                font-size: 1.4rem;
+                color: $stone-500;
+                display: grid;
+                place-items: center;
+
+                &:hover {
+                    color: $stone-800;
+                }
+            }
+        }
+
+        &--filter {
+            font-size: 1rem;
+            color: $stone-800;
+
+            & > select {
+                margin-left: .5rem;
+                border: 1px solid $stone-400;
+                padding: 0.2rem .4rem;
+                border-radius: 3px;
+                color: $stone-800;
+            }
+        }
+    }
+   
+}
+
+@include rwd($md){
+    .header {
+
+        &__search {
+            padding: 0 4rem;
+            @include flex(row);
+            gap: 5rem;
+            justify-content: center;
+        }
+    }
+}

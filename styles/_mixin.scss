@@ -1,0 +1,10 @@
+@mixin flex($dir) {
+  display: flex;
+  flex-direction: $dir;
+}
+
+@mixin rwd($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

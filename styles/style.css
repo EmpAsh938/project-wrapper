@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700;800&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Mukta", sans-serif;
+  background-color: #e7e5e4;
+  line-height: 1.5;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.header__title {
+  padding: 3rem 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+.header__title > h2 {
+  display: inline-block;
+  font-size: 2rem;
+  color: #292524;
+  position: relative;
+}
+.header__title > h2::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #f43f5e;
+}
+.header__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.header__search--box {
+  border: 1px solid #d6d3d1;
+  border-radius: 4px;
+  height: 50px;
+  background-color: #fafaf9;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 2px 5px 5px #d6d3d1;
+}
+.header__search--box > input {
+  flex: 1;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+}
+.header__search--box > input::-moz-placeholder {
+  text-transform: capitalize;
+  color: #78716c;
+}
+.header__search--box > input:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #78716c;
+}
+.header__search--box > input::placeholder {
+  text-transform: capitalize;
+  color: #78716c;
+}
+.header__search--box > button {
+  width: 50px;
+  border-left: 1px solid #d6d3d1;
+  font-size: 1.4rem;
+  color: #78716c;
+  display: grid;
+  place-items: center;
+}
+.header__search--box > button:hover {
+  color: #292524;
+}
+.header__search--filter {
+  font-size: 1rem;
+  color: #292524;
+}
+.header__search--filter > select {
+  margin-left: 0.5rem;
+  border: 1px solid #a8a29e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  color: #292524;
+}
+
+@media screen and (min-width: 960px) {
+  .header__search {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+  }
+}
+.projects {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.projects__box {
+  background-color: #fafaf9;
+  border: solid 1px #d6d3d1;
+  box-shadow: 2px 2px 10px 5px #d6d3d1;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s linear;
+}
+.projects__box:hover {
+  box-shadow: 2px 2px 5px 5px #d6d3d1;
+}
+.projects__box--desc {
+  flex: 1;
+  border-top: 1px solid #d6d3d1;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.projects__box--desc > h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.projects__tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.projects__tags > span {
+  color: #fafaf9;
+  background-color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.projects__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.projects__links > a {
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #44403c;
+}
+.projects__links > a:hover {
+  color: #292524;
+}
+.projects__empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 5rem;
+}
+.projects__empty > h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #44403c;
+}/*# sourceMappingURL=style.css.map */
