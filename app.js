@@ -3,10 +3,15 @@ const selecttags = document.querySelector('.header__search--filter select');
 const searchform = document.querySelector('.header__search--box');
 const input = document.querySelector('.header__search--box input');
 const searchbutton = document.querySelector('.header__search--box button');
+const nextButton = document.getElementById('next');
+const prevButton = document.getElementById('prev');
 
 let main_projects = [];
 let projects = [];
 let tags = [];
+let start = -5;
+let end = 0;
+let amount = 5;
 
 function displayProjects(tag){
     const temp_tags = new Set();
@@ -15,7 +20,7 @@ function displayProjects(tag){
       projectwrapper.innerHTML = `
       <div class="projects__empty">
         <h3>Projects not found</h3>
-        </div>
+      </div>
       `;
     } else {
       projectwrapper.innerHTML = projects.map(item => {
@@ -77,9 +82,8 @@ async function fetchData(){
     try {
         const req = await fetch('data.json');
         const res = await req.json();
-        main_projects = [...main_projects, ...res.projects];
-        projects = [...main_projects];
-        displayProjects("all");
+        main_projects = [...res.projects];
+        paginate(1);
     } catch (error) {
         console.log(error);
     }
@@ -87,8 +91,28 @@ async function fetchData(){
 
 
 
+function paginate(num){
+  if(num === 1) {
+    if(end > main_projects.length) return;
+    start += amount;
+    end += amount;
+  }
+  if(num === -1) {
+    if(start <= 0) return;
+    start -= amount;
+    end -= amount;
+  }
+
+  console.log("start: "+start+"end: "+end);
+  projects = main_projects.slice(start,end);
+  displayProjects("all");
+}
+
+
 window.addEventListener('DOMContentLoaded', fetchData);
 selecttags.addEventListener('change', filterProjects);
 input.addEventListener('input',searchByName);
 searchform.addEventListener('submit', searchByName);
 searchbutton.addEventListener('click',searchByName);
+nextButton.addEventListener('click', ()=>paginate(1));
+prevButton.addEventListener('click', ()=>paginate(-1));
