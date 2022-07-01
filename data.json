@@ -107,6 +107,15 @@
                 "srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/cocktails",
                 "slink":"https://empash-cocktaildb.netlify.app/"
             }
-        }
+        },
+	{
+		"snapshot":"images/sites/hacker-news.png",
+		"title":"hacker news",
+		"techs":["react"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/hacker-news",
+			"slink":"https://empash-hacker-news.netlify.app/"
+		}
+	}
     ]
 }
