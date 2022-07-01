@@ -9,9 +9,9 @@ const prevButton = document.getElementById('prev');
 let main_projects = [];
 let projects = [];
 let tags = [];
-let start = -5;
+let start = -8;
 let end = 0;
-let amount = 5;
+let amount = 8;
 
 function displayProjects(tag){
     const temp_tags = new Set();
