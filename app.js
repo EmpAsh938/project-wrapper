@@ -67,9 +67,11 @@ function filterProjects(e){
     projects = [...main_projects];
   } else {
     projects = main_projects.filter(items => items.techs.includes(e.target.value));
-
+    
   }
-  displayProjects(e.target.value);
+  start = -amount;
+  end = 0;
+  paginate(1);
 }
 
 function searchByName(e){
@@ -93,7 +95,7 @@ async function fetchData(){
 
 function paginate(num){
   if(num === 1) {
-    if(end > main_projects.length) return;
+    if(end > projects.length) return;
     start += amount;
     end += amount;
   }
@@ -104,8 +106,10 @@ function paginate(num){
   }
 
   console.log("start: "+start+"end: "+end);
-  projects = main_projects.slice(start,end);
-  displayProjects("all");
+  projects = main_projects.filter(item => item.techs.includes(selecttags.value)).slice(start,end);
+  if(selecttags.value === "all") projects = main_projects.slice(start,end);
+  if(selecttags.value === "all") displayProjects("all");
+  else displayProjects(selecttags.value);
 }
 
 
