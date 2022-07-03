@@ -125,14 +125,24 @@
 			"srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/quiz",
 			"slink":"https://empash-quiz.netlify.app/"
 		}
-	},{
-	"snapshot":"images/sites/form-validator.png",
-	"title":"form validator",
-	"techs":["html","css","javascript"],
-	"links":{
-		"srcode":"https://github.com/EmpAsh938/project-vanilla-js/tree/main/form-validator",
-		"slink":"https://empash-form-validator.netlify.app"
-	}
+	},
+	{
+		"snapshot":"images/sites/form-validator.png",
+		"title":"form validator",
+		"techs":["html","css","javascript"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/project-vanilla-js/tree/main/form-validator",
+			"slink":"https://empash-form-validator.netlify.app"
+		}
+	},
+	{
+		"snapshot":"images/sites/worldometer-clone.png",
+		"title":"worldometer clone",
+		"techs":["react"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/worldometer-clone",
+			"slink":"https://worldometer-clone.netlify.app"
+		}
 	}
 
     ]
