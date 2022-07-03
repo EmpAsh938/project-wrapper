@@ -48,7 +48,7 @@
         {
             "snapshot":"images/sites/advice-generator.png",
             "title":"advice generator",
-            "techs":["html","css","javascript"],
+            "techs":["html","css","javascript","API"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/frontendmentor/tree/main/advice-generator-app-main",
                 "slink":"https://empash-advice-generator-app-main.netlify.app/"
@@ -93,7 +93,7 @@
         {
             "snapshot":"images/sites/google-clone.png",
             "title":"google clone",
-            "techs":["react","react router"],
+            "techs":["react","API","react router"],
             "links":{
                 "srcode":"https://empash-google-clone.netlify.app/",
                 "slink":"https://empash-google-clone.netlify.app/"
@@ -102,7 +102,7 @@
         {
             "snapshot":"images/sites/cocktaildb.png",
             "title":"cocktailDB",
-            "techs":["react","react router"],
+            "techs":["react","API","react router"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/cocktails",
                 "slink":"https://empash-cocktaildb.netlify.app/"
@@ -111,7 +111,7 @@
 	{
 		"snapshot":"images/sites/hacker-news.png",
 		"title":"hacker news",
-		"techs":["react"],
+		"techs":["react","API"],
 		"links":{
 			"srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/hacker-news",
 			"slink":"https://empash-hacker-news.netlify.app/"
@@ -120,7 +120,7 @@
 	{
 		"snapshot":"images/sites/react-quiz.png",
 		"title":"react quiz",
-		"techs":["react"],
+		"techs":["react","API"],
 		"links":{
 			"srcode":"https://github.com/EmpAsh938/Project-React-JS/tree/master/quiz",
 			"slink":"https://empash-quiz.netlify.app/"
@@ -138,7 +138,7 @@
 	{
 		"snapshot":"images/sites/worldometer-clone.png",
 		"title":"worldometer clone",
-		"techs":["react"],
+		"techs":["react","API"],
 		"links":{
 			"srcode":"https://github.com/EmpAsh938/worldometer-clone",
 			"slink":"https://worldometer-clone.netlify.app"
