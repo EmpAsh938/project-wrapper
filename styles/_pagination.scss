@@ -15,23 +15,10 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: $stone-700;
-        }
-    }
+            color: var(--links);
 
-    &__numbers {
-        @include flex(row);
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        & > button {
-            border-radius: 5px;
-            font-size: .95rem;
-            font-weight: 500;
-
-            &.active {
-                background-color: $stone-500;
-                color: $stone-100;
+            &:hover {
+            color: var(--links-hover);
             }
         }
     }

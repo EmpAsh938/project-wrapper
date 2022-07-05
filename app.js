@@ -5,25 +5,41 @@ const input = document.querySelector('.header__search--box input');
 const searchbutton = document.querySelector('.header__search--box button');
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
+const themeButton = document.querySelector('.header__theme');
 
 let main_projects = [];
 let projects = [];
 let tags = [];
-let start = -8;
-let end = 0;
 let amount = 8;
+let start = -amount;
+let end = 0;
 
-function displayProjects(tag){
+function toggleTheme(){
+  if(document.body.classList.contains('light-theme')) {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+      document.querySelector('.header__theme--sunny').style.display = "none";
+      document.querySelector('.header__theme--moon').style.display = "block";
+    } else {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+      document.querySelector('.header__theme--moon').style.display = "none";
+      document.querySelector('.header__theme--sunny').style.display = "block";
+
+  }
+}
+
+function displayProjects(tag,arr){
     const temp_tags = new Set();
     projectwrapper.innerHTML = "";
-    if(projects.length === 0) {
+    if(arr.length === 0) {
       projectwrapper.innerHTML = `
       <div class="projects__empty">
         <h3>Projects not found</h3>
       </div>
       `;
     } else {
-      projectwrapper.innerHTML = projects.map(item => {
+      projectwrapper.innerHTML = arr.map(item => {
           const {snapshot,title,techs,links:{srcode,slink}} = item;
           return `
           <article class="projects__box">
@@ -77,7 +93,9 @@ function filterProjects(e){
 function searchByName(e){
   e.preventDefault();
   projects = main_projects.filter(item => item.title.search(input.value) !== -1);
-  displayProjects("");
+  start = -amount;
+  end = 0;
+  paginate(1);
 }
 
 async function fetchData(){
@@ -85,6 +103,7 @@ async function fetchData(){
         const req = await fetch('data.json');
         const res = await req.json();
         main_projects = [...res.projects];
+        projects = [...main_projects];
         paginate(1);
     } catch (error) {
         console.log(error);
@@ -94,23 +113,22 @@ async function fetchData(){
 
 
 function paginate(num){
+  
   if(num === 1) {
     if(end > projects.length) return;
     start += amount;
     end += amount;
   }
   if(num === -1) {
-    if(start <= 0) return;
+    if(start === 0) return;
     start -= amount;
     end -= amount;
   }
-
-  console.log("start: "+start+"end: "+end);
-  projects = main_projects.filter(item => item.techs.includes(selecttags.value)).slice(start,end);
-  if(selecttags.value === "all") projects = main_projects.slice(start,end);
-  if(selecttags.value === "all") displayProjects("all");
-  else displayProjects(selecttags.value);
+  let temp_projects = projects.slice(start,end);
+  if(selecttags.value === "all") displayProjects("all",temp_projects);
+  else displayProjects(selecttags.value,temp_projects);
 }
+
 
 
 window.addEventListener('DOMContentLoaded', fetchData);
@@ -120,3 +138,4 @@ searchform.addEventListener('submit', searchByName);
 searchbutton.addEventListener('click',searchByName);
 nextButton.addEventListener('click', ()=>paginate(1));
 prevButton.addEventListener('click', ()=>paginate(-1));
+themeButton.addEventListener('click', toggleTheme);

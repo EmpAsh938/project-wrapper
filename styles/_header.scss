@@ -1,8 +1,26 @@
 .header {
     @include flex(column);
     gap: 2rem;
+    position: relative;
 
+    &__theme {
+        position: absolute;
+        right: 5%;
+        top: 3%;
+        display: grid;
+        place-items: center;
 
+        & > button {
+            font-size: 1.5rem;
+        }
+        &--sunny {
+            color: $stone-800;
+        }
+        &--moon {
+            color: $stone-100;
+            display: none;
+        }
+    }
     &__title {
         padding: 3rem 0;
         padding-bottom: 0;
@@ -11,7 +29,7 @@
         & > h2 {
             display: inline-block;
             font-size: 3rem;
-            color: $stone-800;
+            color: var(--title);
             position: relative;
 
             &::after {
@@ -34,12 +52,12 @@
         gap: 1rem;
 
         &--box {
-            border: 1px solid $stone-300;
+            border: 1px solid var(--shadow);
             border-radius: 4px;
             height: 50px;
             background-color: $stone-50;
             @include flex(row);
-            box-shadow: 2px 2px 5px 5px $stone-300;
+            box-shadow: 2px 2px 5px 5px var(--shadow);
 
             & > input {
                 flex: 1;
@@ -68,7 +86,7 @@
 
         &--filter {
             font-size: 1rem;
-            color: $stone-800;
+            color: var(--title);
 
             & > select {
                 margin-left: .5rem;
