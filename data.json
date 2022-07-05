@@ -3,7 +3,7 @@
         {
             "snapshot":"images/sites/todo.png",
             "title":"todo app",
-            "techs":["html","css","javascript"],
+            "techs":["html/css","javascript"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/project-vanilla-js/tree/main/new-todo",
                 "slink":"https://empash-new-todo.netlify.app"
@@ -12,7 +12,7 @@
         {
             "snapshot":"images/sites/music-app.png",
             "title":"music app",
-            "techs":["html","css","javascript"],
+            "techs":["html/css","javascript"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/project-vanilla-js/tree/main/Music App",
                 "slink":"https://empash-music-app.netlify.app/"
@@ -39,7 +39,7 @@
         {
             "snapshot":"images/sites/bookmark-landing-page.png",
             "title":"bookmark landing page",
-            "techs":["html","css","javascript"],
+            "techs":["html/css","javascript"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/frontendmentor/tree/main/bookmark-landing-page-master",
                 "slink":"https://empash-bookmark-landing-page-master.netlify.app/"
@@ -48,7 +48,7 @@
         {
             "snapshot":"images/sites/advice-generator.png",
             "title":"advice generator",
-            "techs":["html","css","javascript","API"],
+            "techs":["html/css","javascript","API"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/frontendmentor/tree/main/advice-generator-app-main",
                 "slink":"https://empash-advice-generator-app-main.netlify.app/"
@@ -66,7 +66,7 @@
         {
             "snapshot":"images/sites/blogr-landing-page.png",
             "title":"blogr landing page",
-            "techs":["html","css","javascript"],
+            "techs":["html/css","javascript"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/frontendmentor/tree/main/blogr-landing-page-main",
                 "slink":"https://empash-blogr-landing-page-main.netlify.app/"
@@ -129,7 +129,7 @@
 	{
 		"snapshot":"images/sites/form-validator.png",
 		"title":"form validator",
-		"techs":["html","css","javascript"],
+		"techs":["html/css","javascript"],
 		"links":{
 			"srcode":"https://github.com/EmpAsh938/project-vanilla-js/tree/main/form-validator",
 			"slink":"https://empash-form-validator.netlify.app"
