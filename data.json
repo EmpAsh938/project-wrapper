@@ -143,6 +143,16 @@
 			"srcode":"https://github.com/EmpAsh938/worldometer-clone",
 			"slink":"https://worldometer-clone.netlify.app"
 		}
+	},
+	{
+		"snapshot":"images/sites/tip-calculator.png",
+		"title":"tip caculator",
+		"techs":["html","javascript","tailwindcss"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/frontendmentor/treee/main/tip-calculator-app-main",
+			"slink":"https://empash-tip-calculator.netlify.app"
+
+		}
 	}
 
     ]
