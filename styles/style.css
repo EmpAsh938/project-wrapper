@@ -203,6 +203,10 @@ img {
 .projects__box:hover {
   box-shadow: 2px 2px 5px 5px var(--shadow);
 }
+.projects__box--img {
+  background-color: #e7e5e4;
+  min-height: 150px;
+}
 .projects__box--desc {
   flex: 1;
   border-top: 1px solid #d6d3d1;
