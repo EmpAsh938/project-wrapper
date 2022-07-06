@@ -30,7 +30,7 @@
     
         &--desc {
             flex: 1;
-            border-top: 1px solid $stone-300;
+            border-top: 1px solid var(--shadow);
             padding: 1rem;
             padding-top: .5rem;
             @include flex(column);

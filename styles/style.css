@@ -209,7 +209,7 @@ img {
 }
 .projects__box--desc {
   flex: 1;
-  border-top: 1px solid #d6d3d1;
+  border-top: 1px solid var(--shadow);
   padding: 1rem;
   padding-top: 0.5rem;
   display: flex;
