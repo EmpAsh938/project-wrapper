@@ -30,7 +30,6 @@ function toggleTheme(){
 }
 
 function displayProjects(tag,arr){
-    const temp_tags = new Set();
     projectwrapper.innerHTML = "";
     if(arr.length === 0) {
       projectwrapper.innerHTML = `
@@ -50,7 +49,6 @@ function displayProjects(tag,arr){
             <h3>${title}</h3>
             <div class="projects__tags">
               ${techs.map(val => {
-                  temp_tags.add(val);
                   return `<span>${val}</span>`
               }).join("")}
             </div>
@@ -63,8 +61,14 @@ function displayProjects(tag,arr){
           `
       }).join("")
     }
-    tags = [...temp_tags];
+	      listTags();
     displayTags(tag);
+}
+
+function listTags(){
+    const temp_tags = new Set();
+	projects.forEach(item => item.techs.forEach(val => temp_tags.add(val)));
+	tags = [...temp_tags];
 }
 
 function displayTags(tag){
