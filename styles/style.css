@@ -159,11 +159,11 @@ img {
 .header__search--box > button:hover {
   color: #292524;
 }
-.header__search--filter {
+.header__search--filter, .header__search--sort {
   font-size: 1rem;
   color: var(--title);
 }
-.header__search--filter > select {
+.header__search--filter > select, .header__search--sort > select {
   margin-left: 0.5rem;
   border: 1px solid #a8a29e;
   padding: 0.2rem 0.4rem;

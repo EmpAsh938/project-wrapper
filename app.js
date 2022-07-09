@@ -1,5 +1,6 @@
 const projectwrapper = document.querySelector('.projects');
 const selecttags = document.querySelector('.header__search--filter select');
+const sortselect = document.querySelector('.header__search--sort select');
 const searchform = document.querySelector('.header__search--box');
 const input = document.querySelector('.header__search--box input');
 const searchbutton = document.querySelector('.header__search--box button');
@@ -63,6 +64,31 @@ function displayProjects(tag,arr){
     }
 	      listTags();
     displayTags(tag);
+}
+
+function sortAscending(arr){
+  arr.sort((a,b) => {
+    if(a.title < b.title) return -1;
+    if(a.title > b.title) return 1;
+    return 0;
+  });
+}
+
+function sortDescending(arr){
+  arr.sort((a,b) => {
+    if(a.title > b.title) return -1;
+    if(a.title < b.title) return 1;
+    return 0;
+  });
+}
+
+function sortProject(e){
+  if(e.target.value === "descending") sortDescending(projects);
+  else if(e.target.value === "ascending") sortAscending(projects);
+  else projects = [...main_projects];
+  start = -amount;
+  end = 0;
+  paginate(1);
 }
 
 function listTags(){
@@ -137,6 +163,7 @@ function paginate(num){
 
 window.addEventListener('DOMContentLoaded', fetchData);
 selecttags.addEventListener('change', filterProjects);
+sortselect.addEventListener('change', sortProject);
 input.addEventListener('input',searchByName);
 searchform.addEventListener('submit', searchByName);
 searchbutton.addEventListener('click',searchByName);

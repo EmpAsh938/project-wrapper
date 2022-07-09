@@ -84,7 +84,8 @@
             }
         }
 
-        &--filter {
+        &--filter,
+        &--sort {
             font-size: 1rem;
             color: var(--title);
 
