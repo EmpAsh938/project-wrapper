@@ -153,6 +153,15 @@
 			"slink":"https://empash-tip-calculator.netlify.app"
 
 		}
+	},
+	{
+		"snapshot":"images/sites/photo-library.png",
+		"title":"photo library",
+		"techs":["react","tailwindcss","typescript"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/photo-library",
+			"slink":"https://empash-photo-library.netlify.app"
+		}
 	}
 
     ]
