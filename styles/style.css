@@ -202,6 +202,7 @@ img {
 }
 .projects__box:hover {
   box-shadow: 2px 2px 5px 5px var(--shadow);
+  transform: scale(1.02);
 }
 .projects__box--img {
   background-color: #e7e5e4;
