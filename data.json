@@ -162,6 +162,15 @@
 			"srcode":"https://github.com/EmpAsh938/photo-library",
 			"slink":"https://empash-photo-library.netlify.app"
 		}
+	},
+	{
+		"snapshot":"images/sites/tictactoe.png",
+		"title":"TicTacToe",
+		"techs":["react","sass"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/tictactoe",
+			"slink":"https://empash-tictactoe.netlify.app"
+		}
 	}
 
     ]
