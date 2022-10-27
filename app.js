@@ -44,7 +44,7 @@ function displayProjects(tag,arr){
           return `
           <article class="projects__box">
           <div class="projects__box--img">
-            <img src="${snapshot}" alt="${title}" />
+            <img src="${snapshot}" alt="${title}" loading="lazy"/>
           </div>
           <div class="projects__box--desc">
             <h3>${title}</h3>
