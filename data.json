@@ -171,7 +171,15 @@
 			"srcode":"https://github.com/EmpAsh938/tictactoe",
 			"slink":"https://empash-tictactoe.netlify.app"
 		}
+	},
+	{
+		"snapshot":"images/sites/writein.png",
+		"title":"Blogging App",
+		"techs":["react","typescript","nodejs", "express", "cloudinary", "redux-toolkit", "mongodb"],
+		"links":{
+			"srcode":"https://github.com/EmpAsh938/writein",
+			"slink":"https://writein.fly.dev"
+		}
 	}
-
     ]
 }
