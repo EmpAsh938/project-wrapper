@@ -180,6 +180,15 @@
 			"srcode":"https://github.com/EmpAsh938/writein",
 			"slink":"https://writein.fly.dev"
 		}
-	}
+	},
+	    {
+		    "snapshot":"images/sites/amazon-clone.png",
+		    "title":"Amazon Clone",
+		    "techs":["react","firebase","styled components"],
+		    "links": {
+		    	"srcode":"https://github.com/EmpAsh938/amazon-clone",
+			"slink":"https://react-amazon-clone.netlify.app/"
+		    }
+	    }
     ]
 }
