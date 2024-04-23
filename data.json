@@ -1,5 +1,14 @@
 {
     "projects": [
+	     {
+            "snapshot":"images/sites/ludo.png",
+            "title":"Ludo",
+            "techs":["react","tailwindcss"],
+            "links":{
+                "srcode":"https://github.com/EmpAsh938/Ludo",
+                "slink":"https://ludobyempash.netlify.app"
+            }
+        },
         {
             "snapshot":"images/sites/todo.png",
             "title":"todo app",
@@ -12,7 +21,7 @@
         {
             "snapshot":"images/sites/music-app.png",
             "title":"music app",
-            "techs":["html/css","javascript"],
+            "techs":["react","tailwind", "contextapi"],
             "links":{
                 "srcode":"https://github.com/EmpAsh938/project-vanilla-js/tree/main/Music App",
                 "slink":"https://empash-music-app.netlify.app/"
